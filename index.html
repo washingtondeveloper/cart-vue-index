@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Cart</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<style type="text/css">
+		button {
+			width: 120px;
+		}
+
+		.outSock {
+			text-decoration: line-through;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="nav-bar"></div>
+	<div id="app">
+
+		<product-count :cart="cart"></product-count>
+
+		<product 
+			:premium="premium" 
+			:lengthcart="cart"
+			@add-to-cart="addCart"
+			@remove-of-cart="removeCart"></product>
+	</div>
+
+	<script type="text/javascript" src="components/product-count.js"></script>
+	<script type="text/javascript" src="components/product-details.js"></script>
+	<script type="text/javascript" src="components/product-preview.js"></script>
+	<script type="text/javascript" src="components/product.js"></script>
+	<script type="text/javascript" src="components/product-tabs.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
